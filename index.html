@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Management Company Navbar</title>
+    <link rel="icon" href="title.png" type="image/png">
+
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3674B5;
+            padding: 10px 20px;
+            position: fixed;
+            width:97%;
+            z-index:2;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 20px;
+            ;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #578FCA;
+            border-radius: 45%;
+        }
+
+        .navbar .logo {
+            font-size: 44px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            ;
+        }
+
+        .logo:hover {
+            text-shadow: 4px 4px 4px black;
+            ;
+        }
+
+        .navbar .menu {
+            display: flex;
+        }
+
+        .navbar .menu a {
+            margin-left: 20px;
+        }
+
+        .grid-container {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .grid-item {
+            box-shadow: 0px 0px 4px 4px grey;
+            ;
+            border-radius: 15px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .grid-item p {
+            font-size: 30px;;
+            color: #578FCA;
+            text-align: center;
+        }
+        .grid-item:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px 10px grey;
+        }
+        .heading {
+            width: 100%;
+            height: fit-content;
+
+        }
+
+        .heading img {
+            float: right;
+
+        }
+
+        .heading h1 {
+            color: #578FCA;
+            font-size: 65px;
+            width: 70%;
+        }
+
+        .heading p {
+            color: #3674B5;
+            font-size: 25px;
+            width: 60%;
+        }
+
+        .container {
+            max-width: 1200px;
+            /* Maximum width of the container */
+            margin: 20px auto;
+            /* Center the container */
+            padding: 20px;
+            /* Padding inside the container */
+            background-color: #fff;
+            /* White background */
+            border-radius: 8px;
+            /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+        }
+
+        h2 {
+            text-align: center;
+            /* Center the heading */
+            color: #333;
+            /* Dark text color */
+        }
+
+        .characteristics {
+            display: grid;
+            /* Use grid layout */
+            grid-template-columns: repeat(auto-fill, minmax(290px, 2fr));
+            /* Responsive columns */
+            gap: 20px;
+            /* Space between items */
+        }
+
+        .characteristic {
+            background-color: #e9ecef;
+            /* Light background for each characteristic */
+            border-radius: 5px;
+            /* Rounded corners */
+            padding: 15px;
+            /* Padding inside each item */
+            text-align: center;
+            /* Center text */
+            transition: transform 0.3s;
+            /* Smooth scaling effect */
+        }
+
+        .characteristic:hover {
+            transform: scale(1.05);
+            /* Scale effect on hover */
+        }
+
+        .characteristic h3 {
+            color: #3674B5;
+            /* Blue color for subheadings */
+            font-size: 30PX;
+            ;
+        }
+
+        .characteristic p {
+            color: #578FCA;
+
+        }
+
+        h6 {
+            font-size: 65px;
+            height: 2rem;
+            text-align: center;
+            color:#3674B5;
+            margin-left: 430px;;
+        }
+        h2{
+            font-size: 65px;
+            height: 2rem;
+            text-align: center;
+            color:#3674B5;
+        
+        }
+        .icontainer {
+            max-width: 1200px; /* Maximum width of the container */
+            margin: 20px auto; /* Center the container */
+            padding: 20px; /* Padding inside the container */
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between items */
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+        }
+
+        .item {
+            background-color: #fff; /* White background for each item */
+            border: 1px solid #ddd; /* Border around each item */
+            border-radius: 5px; /* Rounded corners */
+            padding: 15px; /* Padding inside each item */
+            flex: 1; /* Allow items to grow equally */
+            margin: 10px; /* Margin around each item */
+            min-width: 220px; /* Minimum width for each item */
+            text-align: center; /* Center text */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s ease-in-out; /* Adjust time (0.3s) for speed */
+
+        }
+        
+        .item:hover{
+            transform: scale(1.1);
+            box-shadow:0px 0px 5px 5px grey;;
+        }
+
+        .item img {
+            max-width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+       .item h3 {
+            color: #007bff; /* Blue color for headings */
+            margin: 10px 0; /* Margin around headings */
+            font-size:45px;
+        }
+
+        .item p {
+            color: #555; /* Dark gray color for descriptions */
+            font-size:25px;
+        }
+.footer{
+    width:100%;
+    height:fit-content;
+    background-color: #3674B5;
+}
+.footer h3{
+    color:white;
+    font-size: 35px;
+    text-align: center;
+}
+.footer p{
+    color:white;
+    font-size: 25px;
+    text-align: center;
+}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar .menu a {
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        img:hover{
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">CreatorHub</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#creators">Our Creators</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <br><br>
+    <header>
+        <div class="heading">
+            <img src="start.jpg">
+            <h1>We Provide Outstanding Creative Work</h1>
+            <p>"Empowering Creators to Thrive: We specialize in managing and promoting talented individuals, connecting
+                them with brands and opportunities that elevate their creative careers to new heights."</p>
+        </div>
+    </header>
+
+    <br>
+    <H6>Our Goals</H6>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="1.jpg" alt="Image 1" height="250px">
+            <p>Business Goal</p>
+        </div>
+        <div class="grid-item">
+            <img src="2.jpg" alt="Image 2" height="250px">
+            <p>Business Focus</p>
+        </div>
+        <div class="grid-item">
+            <img src="4.jpg" alt="Image 3" height="250px">
+            <p>Business Growth</p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="container">
+        <h2>Our Company Characteristics</h2>
+        <div class="characteristics">
+            <div class="characteristic">
+                <h3>Empowerment</h3>
+                <p>We empower creators by providing them with the tools and resources they need to succeed in their
+                    creative endeavors.</p>
+            </div>
+            <div class="characteristic">
+                <h3>Collaboration</h3>
+                <p>We foster collaboration between creators and brands, ensuring mutually beneficial partnerships that
+                    drive success.</p>
+            </div>
+            <div class="characteristic">
+                <h3>Support</h3>
+                <p>Our dedicated team offers ongoing support to help creators navigate their careers and achieve their
+                    goals.</p>
+            </div>
+            <div class="characteristic">
+                <h3>Innovation</h3>
+                <p>We embrace innovation, staying ahead of industry trends to provide cutting-edge solutions for our
+                    creators.</p>
+            </div>
+            <div class="characteristic">
+                <h3>Community</h3>
+                <p>We build a strong community of creators, encouraging networking and sharing of ideas and experiences.
+                </p>
+            </div>
+            <div class="characteristic">
+                <h3>Integrity</h3>
+                <p>We operate with integrity, ensuring transparency and honesty in all our dealings with creators and
+                    partners.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <br>
+    <div class="icontainer">
+        <div class="item">
+            <img src="a1.jpg" alt="Image 1">
+            <br><br><br>
+            <h3>949</h3>
+            <p>Satisfied Customers</p>
+        </div>
+        <div class="item">
+            <img src="a2.jpg" alt="Image 2">
+            <h3>185</h3>
+            <p>Built Websites</p>
+        </div>
+        <div class="item">
+            <img src="a3.jpg" alt="Image 3">
+            <h3>100</h3>
+            <p>Export Workers</p>
+        </div>
+        <div class="item">
+            <img src="a4.jpg" alt="Image 4">
+            <h3>200</h3>
+            <p>experience Years</p>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>CreatorHub</h3>
+        <p>&copy; 2023 CreatorHub. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
